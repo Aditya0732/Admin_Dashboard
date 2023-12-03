@@ -15,7 +15,9 @@ button {
 button:hover{
   background-color: rgba(216, 205, 205, 0.233);
 }
-
+.tableDiv{
+  min-height: 554px;
+}
 table {
     width: 100%;
     border-collapse: collapse;

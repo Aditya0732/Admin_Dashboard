@@ -165,6 +165,7 @@ const Main = () => {
             </div>
 
             {/* Table with rows */}
+            <div className={styles.tableDiv}>
             <table>
                 <tr>
                     {/* Checkbox column */}
@@ -202,7 +203,7 @@ const Main = () => {
                     })()
                 }
             </table>
-
+            </div>
             {/* Pagination navigation */}
             <nav>
                 <ul className={styles.pagination}>
