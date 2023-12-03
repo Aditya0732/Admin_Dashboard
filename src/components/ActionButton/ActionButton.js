@@ -1,5 +1,5 @@
 const ActionButton=(props)=>{
-    return <button onClick={props.onClickHandler}>
+    return <button className={props.className} onClick={props.onClickHandler}>
     {props.text}
     </button>
 }

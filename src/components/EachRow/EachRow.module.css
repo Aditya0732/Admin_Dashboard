@@ -1,0 +1,23 @@
+.selected {
+    background-color: #f5f5f5;
+  }
+
+  /* Basic input styling */
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Hover effect */
+input:hover {
+  border-color: #66afe9;
+}
+
+/* Focus effect */
+input:focus {
+  outline: none;
+  border-color: #4d90fe;
+  box-shadow: 0 0 5px rgba(77, 144, 254, 0.5);
+}

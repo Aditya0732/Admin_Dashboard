@@ -1,81 +1,159 @@
+
 .main{
     padding: 20px;
+}
+.selectedRowsCount{
+ 
+}
+button {
+  background: none;
+  cursor: pointer;
+  border: 0.8px solid #d4d4d4;
+  margin: 0px 3px;
+  border-radius: 6px;
+}
+button:hover{
+  background-color: rgba(216, 205, 205, 0.233);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    /* font-weight: 500; */
+    /* font-family:sans-serif */
   }
 
   tr:first-child{
-    color:grey;
+    color:rgb(103, 99, 99);
   }
   th, td {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 10px;
+    padding: 13px;
   }
 
   th {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
   }
-
+  .checked-row {
+    background-color: #c1c5bc; /* Change this to the desired color */
+  }
   tr:hover {
     background-color: #f5f5f5;
   }
 
  /* Pagination container styles */
 nav {
-    text-align: center;
-    margin-top: 20px;
-  }
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
   
-  /* Pagination list styles */
-  ul.pagination {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    justify-content: center;
+}
+
+/* Pagination list styles */
+ul.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: end;
+}
+
+/* Pagination item styles */
+li.pageItem {
+  display: flex;
+  margin: 0 0;
+}
+
+/* Pagination link styles */
+button.pageLink {
+  text-decoration: none;
+  background: none;
+  padding: 6px 11px;
+  border: 1px solid #36383a; /* Border color */
+  color: #474a4b; /* Text color */
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button.pageLink:hover {
+  background-color: rgb(64, 66, 69); /* Hover background color */
+  color: #fff; /* Hover text color */
+  transform: scale(1.1); /* Hover scale effect */
+}
+
+/* Active page styles */
+li.pageItem.active button.pageLink {
+  background-color: #3a3c3e; /* Active background color */
+  color: #fff; /* Active text color */
+  border: 1px solid #4f5153;
+  cursor: default;
+}
+
+/* Previous and Next button styles */
+button.pageLink.prevNext {
+  font-weight: bold;
+}
+
+button.pageLink.prevNext:hover {
+  background-color: #2672b1; /* Hover background color */
+  color: #fff; /* Hover text color */
+}
+
+/* Disabled button styles */
+button.pageLink.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  /* Adjust padding and font size for small devices */
+  button.pageLink {
+    padding: 8px 12px;
+    font-size: 14px;
   }
-  
-  /* Pagination item styles */
-  li.pageItem {
-    display: inline;
-    margin: 0 5px;
+
+  /* Optionally, you can reduce the border-radius for small devices */
+  button.pageLink,
+  li.pageItem.active button.pageLink {
+    border-radius: 2px;
   }
+}
+
+.pageNumber{
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
   
-  /* Pagination link styles */
-  a.pageLink {
-    text-decoration: none;
-    padding: 10px 15px;
-    border: 1px solid #3498db; /* Border color */
-    color: #3498db; /* Text color */
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  a.pageLink:hover {
-    background-color: #3498db; /* Hover background color */
-    color: #fff; /* Hover text color */
-  }
-  
-  /* Active page styles */
-  li.pageItem.active a.pageLink {
-    background-color: #3498db; /* Active background color */
-    color: #fff; /* Active text color */
-    border: 1px solid #3498db;
-    cursor: default;
-  }
-  
-  /* Previous and Next button styles */
-  a.pageLink.prevNext {
-    font-weight: bold;
-  }
-  
-  /* Disabled button styles */
-  a.pageLink.disabled {
-    pointer-events: none;
-    opacity: 0.5;
-  }
-  
+
+  /* Styling for the search button container */
+.search_button {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 10px;/* Center items vertically */
+}
+
+/* Styling for the search input */
+.search-icon {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: auto;
+
+}
+
+/* Styling for the selected rows count paragraph */
+.selectedRowsCount {
+  margin-left: 10px; /* Adjust the margin as needed */
+  font-size: 14px;
+  color: #333; /* Adjust the color as needed */
+  margin-right: 10px;
+}
